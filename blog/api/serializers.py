@@ -1,6 +1,11 @@
 from rest_framework import serializers
 from blog.models import Post, Tag, Comment, AuthorProfile
 
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = "__all__"
+
 class TagField(serializers.SlugRelatedField):
     def to_internal_value(self, data):
         try:
