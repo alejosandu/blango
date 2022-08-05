@@ -18,6 +18,9 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+# django-versatileimagefield
+from django.conf.urls.static import static
+
 import blog.views
 import blango_auth.views
 
@@ -45,5 +48,6 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += [
         path("__debug__/", include(debug_toolbar.urls)),
-    ]
+    # django-versatileimagefield
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

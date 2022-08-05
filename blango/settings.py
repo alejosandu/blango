@@ -66,6 +66,7 @@ class Dev(Configuration):
         "rest_framework",
         "rest_framework.authtoken",
         "django_filters",
+        "versatileimagefield",
     ]
 
     MIDDLEWARE = [
@@ -150,6 +151,10 @@ class Dev(Configuration):
     ACCOUNT_EMAIL_REQUIRED = True
     ACCOUNT_USERNAME_REQUIRED = False
     ACCOUNT_AUTHENTICATION_METHOD = "email"
+
+    # django-versatileimagefield
+    MEDIA_ROOT = BASE_DIR / "media"
+    MEDIA_URL = "/media/"
 
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/3.2/howto/static-files/
