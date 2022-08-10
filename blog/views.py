@@ -38,3 +38,8 @@ def post_detail(request, slug):
 def get_ip(request):
   from django.http import HttpResponse
   return HttpResponse(request.META['REMOTE_ADDR'])
+
+
+# render javascript
+def post_table(request):
+    return render(request, "blog/post-table.html")
