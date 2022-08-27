@@ -56,6 +56,8 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         "blango_auth",
         'blog',
+        # added later, dont know if break something
+        "django_registration",
         "crispy_forms",
         "crispy_bootstrap5",
         "debug_toolbar",
@@ -143,6 +145,7 @@ class Dev(Configuration):
 
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+    # Activation days till email expires
     ACCOUNT_ACTIVATION_DAYS = 7
 
     # Allauth Settings
